@@ -4,13 +4,13 @@ let sayName=function(){
 }
 sayName();
 
-//IIFE
+//IIFE function
 (
     function(){
         console.log(`I am Inevitable`);
     }
 )();
-    //IIFE Application
+    //IIFE function  Application
 (
     function(){
         let house=`Gryfffindor`;
@@ -31,7 +31,7 @@ sayName();
     }
 )();
 
-//Block Scope
+//Block Scope(Alternative for IIFE application)
 {let house="Gryffindor";console.log(house)};
 {let house="RavenClaw";console.log(house)};
 {let house=`Slytherin`;console.log(house)};
