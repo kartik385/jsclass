@@ -73,3 +73,59 @@ function indInfo(name,house,...subjects){
 }
 let stu3=indInfo(`Draco`,`Slytherin`,`Quiddich`,`Transformation`,`DADA`,`Herbology`);
 console.log(stu3);
+
+
+//function hoisting
+
+display();
+function display() {
+    console.log(`My King`)
+    
+}
+
+//will not work
+/*honour();
+let honour=function(){
+    console.log(`Majesty`);
+}*/
+
+//Default parameter
+
+function teachers(name=`Lockhart`,course=`DADA`){
+    return{name,course};
+}
+console.log(teachers());
+
+//Arrow function
+        //Normal function
+let houseKeeper=function(){
+    console.log(`I am Normal Hagrid`);
+}
+houseKeeper();
+        //Arrow Function
+let houseKeeperA=()=>{
+    console.log(`I am Arrow Hagrid`);
+}
+houseKeeperA();
+        //Single Line
+let houseKeeperS=()=>console.log(`I am Single Hagrid`);
+houseKeeperS();
+
+let add=(a,b)=>a+b;
+console.log(add(3,4));
+
+      //Arrow function without parameters
+let houseKeeperU=_=>console.log(`I am Under Hagrid`);
+houseKeeperU();
+
+      //Arrow function with one parameter
+let gateKeeper=name=>name;
+console.log(gateKeeper(`Hagrid`));
+
+      //Arrow function with array
+let subjects=(x,y)=>[x,y];
+console.log(subjects(`DADA`,`Herbology`));
+
+    //Arrow Function with objects
+let prof=(x,y)=>({x,y});
+console.log(prof(`Snape`,`Macgonnegell`));
