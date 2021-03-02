@@ -129,3 +129,57 @@ console.log(subjects(`DADA`,`Herbology`));
     //Arrow Function with objects
 let prof=(x,y)=>({x,y});
 console.log(prof(`Snape`,`Macgonnegell`));
+
+/*
+    Argument object is
+     invalid
+let dispaly=_=>arguments;
+console.log(dispaly(`Harry`,`Ron`));
+    (uncaught error:Not Defined)
+*/
+
+  //No this Binding
+
+let userArrow={
+    name:`NoobMaster`,
+    lvl:7,
+    game:`Fortnite`,
+    getInfo:_=>console.log(`${this.name}:${this.ganme}:${this.lvl}`)
+};
+userArrow.getInfo();
+
+//Call Back Function
+function callName() {
+    console.log(`My name is Ron`);
+}
+function print(callname){
+    callName();
+}
+print(callName);
+
+let Add=(a,b)=>a+b;
+let Multiply=(a,b)=>a*b;
+function
+ calculation(a,b,callback){
+    return callback(a,b);
+}
+console.log(calculation(2,1,Add));
+
+//Function closure
+
+let outerWall=`Inside Outer Wall`;
+
+function middleBLock(){
+    let middleWall=`Inside Middle Wall`;
+    function innerWall(){
+        let innerWall=`Inside Inner Wall`;
+        console.log(outerWall);
+        console.log(middleWall);
+        console.log(innerWall);
+    }
+    innerWall(); 
+
+}
+middleBLock();
+
+
