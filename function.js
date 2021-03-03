@@ -159,8 +159,7 @@ print(callName);
 
 let Add=(a,b)=>a+b;
 let Multiply=(a,b)=>a*b;
-function
- calculation(a,b,callback){
+function calculation(a,b,callback){
     return callback(a,b);
 }
 console.log(calculation(2,1,Add));
@@ -182,4 +181,17 @@ function middleBLock(){
 }
 middleBLock();
 
+//Constructor Function
+
+function Player(name,team,age,goals) {
+    this.name=name;
+    this.team=team;
+    this.age=age;
+    this.goals=goals;
+    
+}
+let player1=new Player(`Ronaldo`,`Juventus`,32,51);
+let player2=new Player(`Messi`,`Barcelona`,31,58);
+console.log(player1);
+console.log(player2);
 
