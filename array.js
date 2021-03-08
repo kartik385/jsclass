@@ -51,3 +51,67 @@ console.log(wordArray);
    //From MEthod
 let fromArray=Array.from(user);
 console.log(fromArray);
+
+//Array looping
+
+
+        //For of loop
+let numbers=[20,30,40];
+for(let number of numbers){
+    console.log(number);
+}
+
+    //For of argumnets
+let players=function(){
+    for(let player of arguments){
+        console.log(player);
+    }
+}
+players(`JON JONES`,`Khabib`,`Connor`);
+
+    //For Each
+numbers.forEach((value,index,array)=>{
+    console.log(array);
+    console.log(`Index=${index}:Value=${value}`);
+});
+
+//Map method
+
+numbers.map((value,index,array)=>console.log(value));
+
+            //Map V/S For Each
+
+        //Map returns
+
+let y=numbers.forEach(value=>value*2);//Returns Void
+console.log(y);//Undefined
+
+let x=numbers.map(value=>value*5);//Returns a new Array
+console.log(x);
+
+        //Supports chaining    
+
+
+
+//Push method
+let movies=[`Avatar`,`Tenet`];
+movies.push(`Interstellar`);
+console.log(movies);
+//Appends elements at last
+
+
+
+//Unshift method
+movies.unshift(`Terminator`);
+console.log(movies);
+//Appends elemnets at first
+
+//Pop method
+movies.pop();
+console.log(movies);
+//Delete last element
+
+//Shit Method
+movies.shift();
+console.log(movies);
+//Delete first element
