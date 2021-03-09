@@ -115,3 +115,52 @@ console.log(movies);
 movies.shift();
 console.log(movies);
 //Delete first element
+
+//Splice Method
+
+let jedis=[`Anakin`,`Obi-Wan`,`Luke`,`Rey`];
+jedis.splice(0,0,`Quin-Gon`);
+console.log(jedis);//Adds Element to the 0th position
+
+//IndexOf
+console.log(jedis.indexOf(`Anakin`));//Returns -1 if its not exists
+
+//Last Index of
+jedis.push('Luke');
+console.log(jedis.lastIndexOf(`Luke`));
+
+//Filter
+
+let runs=[25,30,10,0,105,98,71,16,19];
+let filteredRuns=runs.filter(x=>x>=25);
+console.log(filteredRuns);
+
+let users=[`Annie`,`Reiner`,`Reiner`,`Riener`,`Eren`,`Eren`];
+let filteredUsers=users.filter((value,index,array)=>{
+    (array.indexOf(value)===index)
+});
+console.log(filteredUsers);
+
+//Sort Method
+let values=[21,11,87,98,41,3,35,100];
+console.log(values.sort());
+let sortedValues=values.sort((a,b)=>{
+    if(a>b)return 1;
+    else if(a<b) return -1;
+    else return 0;
+});    
+console.log(sortedValues);
+
+//Reverse String
+let myName=`Kartik`;
+let myNameArray=myName.split("");
+let reverseName=myNameArray.reverse().join("");
+console.log(reverseName);
+
+//Using Function
+let reverseNameF=(str)=>{
+    let reverseName=[...str].reverse().join("");
+    return reverseName;
+}
+console.log(reverseNameF('Kartik'));
+
