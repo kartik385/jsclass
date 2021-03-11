@@ -92,4 +92,3 @@ console.log(gryffindorsBoys);
 let gryffindors=usernames.slice(1);
 console.log(gryffindors);
 
-
