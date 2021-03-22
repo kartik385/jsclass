@@ -59,7 +59,6 @@ div1.textContent="Cant touch this!"
 div1.style.color="red";
 div1.innerHTML="<h1>Cant touch this!</h1>"
 div1.style.backgroundColor="green";
-div1.style.transform=scale(4);
 
 //Adding attributes(setAttribute)
 
@@ -69,3 +68,92 @@ div1.setAttribute("title","How do yu ")
 
 div1.className="moris";      
 
+//create element in dom
+
+let keto=document.createElement(`article`);
+keto.textContent="Shut the **** up!";
+console.log(keto);
+
+//append
+
+div1.append(keto);//adds the element after the root element
+
+//prepend
+
+div1.prepend(keto)//adds before root element
+
+
+let form=document.createElement(`form`);
+
+//label elements
+let userNameLabel=document.createElement(`label`);
+let userPasswordLAbel=document.createElement(`password`);
+
+//input elements
+
+let userNameInput=document.createElement(`input`);
+let userPasswordInput=document.createElement(`input`);
+
+//adding attributes
+
+userNameLabel.setAttribute(`for`,`username`);
+
+userPasswordLAbel.setAttribute(`for`,`userpassword`);
+
+userNameInput.setAttribute(`type`,`text`);
+
+userNameInput.setAttribute(`id`,`username`);
+
+userNameInput.setAttribute(`name`,`username`);
+
+userNameInput.placeholder=`Enter your Damn name!`;
+
+userPasswordInput.type=`password`;
+
+userPasswordInput.id=`userpassword`;
+
+userPasswordInput.name=`userpassword`;
+
+userPasswordInput.placeholder=`Enter your password idiot!`;
+
+let butt=document.createElement(`button`);
+butt.innerText=`Submit`;
+
+butt.name=`Submit`;
+
+let divF1=document.createElement(`div`);
+
+let divF2=document.createElement(`div`);
+
+
+
+form.action=`#`;
+
+form.method=`GET`;
+
+form.appendChild(divF1);
+
+form.appendChild(divF2);
+
+divF1.appendChild(userNameLabel);
+
+divF1.appendChild(userNameInput);
+
+divF2.appendChild(userPasswordLAbel);
+
+divF2.appendChild(userPasswordInput);
+
+divF2.appendChild(butt);
+document.body.appendChild(form);
+
+
+let i=1;
+for(let a of [...document.links]){
+        a.className=`link${i}`;
+        a.textContent=`Hi${i}`
+        a.style.textDecoration=`none`;
+        a.style.padding=`10px`;
+        a.style.margin=`5x`;
+        a.style.color=`red`;
+        i++;
+}
